@@ -1,20 +1,70 @@
-*{
-    padding: 0%;
-    background-color:aliceblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1{
-    text-align: center;
-    align-items: center;
+
+body {
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-.container{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: x-large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #0077b6;
 }
-button{
-    padding: 10px;
-    background-color:rgba(233, 233, 232, 0.768);
-    cursor: pointer;
+
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 15px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.time-part {
+  font-size: 4em;
+  margin: 0 10px;
+  color: #023e8a;
+  min-width: 60px;
+  text-align: center;
+}
+
+.separator {
+  font-size: 3em;
+  color: #48cae4;
+}
+
+button {
+  height: 60px;
+  width: 250px;
+  border-radius: 15px;
+  border: none;
+  background-color: #00b4d8;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077b6;
+  box-shadow: 0 0 20px #0077b64f;
+}
+
+.day-message {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #03045e;
+  font-weight: bold;
 }

@@ -1,11 +1,22 @@
+function timer() {
+  let date = new Date();
+  let sec = String(date.getSeconds()).padStart(2, "0");
+  let min = String(date.getMinutes()).padStart(2, "0");
+  let hrs = String(date.getHours()).padStart(2, "0");
+
+  document.getElementById("sec").innerText = sec;
+  document.getElementById("min").innerText = min;
+  document.getElementById("heu").innerText = hrs;
+}
+setInterval(timer, 1000);
+
 document.getElementById("btn").addEventListener("click", () => {
-    console.log("the button is clicked seccucfully...");
+  console.log("The button was clicked successfully.");
+  let date = new Date();
+  let hrs = date.getHours();
+  if (hrs >= 12) {
+    document.getElementById("day").innerHTML = "<div>It's noon 'PM'</div>";
+  } else {
+    document.getElementById("day").innerHTML = "<div>It's morning 'AM'</div>";
+  }
 });
-const date = new Date();
-console.log(date);//this date code is working but i don't really know why is the other code note but we'll figure it out soon
-const Hr = date.getHours();
-const Mn = date.getMinutes();
-const Sc = date.getSeconds();
-document.getElementById("sec").innerText(date.Sc);
-document.getElementById("min").innerText(Mn);
-document.getElementById("heu").innerText(Hr);

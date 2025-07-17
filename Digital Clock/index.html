@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Digital clock</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Digital Clock</title>
 </head>
 <body>
-    <h1>what's the time now</h1>
-    <div class="container">
-        <div id="sec"></div>
-        <span>:</span>
-        <div id="min"></div>
-        <span>:</span>
-        <div id="heu"></div>
-    </div>
-    <button type="button" id="btn">start over</button>
-    <script src="script.js"></script>
+  <h1>🕒 Quelle heure est-il ?</h1>
+
+  <div class="clock-container">
+    <div class="time-part" id="heu">00</div>
+    <span class="separator">:</span>
+    <div class="time-part" id="min">00</div>
+    <span class="separator">:</span>
+    <div class="time-part" id="sec">00</div>
+  </div>
+
+  <button type="button" id="btn">Check AM or PM</button>
+  <div id="day" class="day-message"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
