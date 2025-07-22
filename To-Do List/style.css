@@ -1,0 +1,44 @@
+/* General layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style for task container */
+#taskNameAdded > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+/* Task text label */
+#taskNameAdded label {
+    margin-left: 10px;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Radio button */
+#taskNameAdded input[type="radio"] {
+    transform: scale(1.2);
+}
+
+/* Delete button */
+#taskNameAdded button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#taskNameAdded button:hover {
+    background-color: #bb2d3b;
+}
