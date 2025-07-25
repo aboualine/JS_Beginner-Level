@@ -1,39 +1,25 @@
-let elementClicked = document.getElementsByTagName("button");
 let screen = document.getElementById("screen");
-let result = 0 ;
-let secondValue = "" ;
-for (let index = 0; index < elementClicked.length; index++) {
-    const element = elementClicked[index];
-    element.addEventListener("click" , () => {
-        console.log("element clicked is : "+elementClicked[index].getAttribute("data-value"));
-        let valueSelected = elementClicked[index].getAttribute("data-value");
-        
-        
-        switch (valueSelected) {
-            case "+":
-                result += valueSelected;
-                screen.setAttribute("value" ,result);
-                break;
-            case "-":
-                result -= valueSelected;
-                break;
-            case "*":
-                result *= valueSelected;
-                break;
-            case "/":
-                result /=valueSelected;
-                break;    
-            case "=":
-                result;
-                break;
-            case "AC":
-                result ="0";
-                screen.setAttribute("value" ,result);
-                break;
-            default:
-                result = 0;
-                break;
+let buttons = document.getElementsByTagName("button");
+
+let expression = "";
+
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+        let value = buttons[i].getAttribute("data-value");
+
+        if (value === "AC") {
+            expression = "";
+        } else if (value === "=") {
+            try {
+                expression = eval(expression).toString();
+            } catch (error) {
+                expression = "Erreur";
+            }
+        } else {
+            expression += value;
         }
+
+        screen.value = expression;
     });
-    
 }
+
