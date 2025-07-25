@@ -1,0 +1,16 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button:focus {
+  box-shadow: none;
+}
+
+.container {
+    max-width: 400px;
+}
+
+#screen {
+    color: black;
+    
+}
