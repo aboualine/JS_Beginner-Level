@@ -13,7 +13,8 @@ for (let i = 0; i < buttons.length; i++) {
             try {
                 expression = eval(expression).toString();
             } catch (error) {
-                expression = "Erreur";
+                screen.value = "Error";
+                expression = "";
             }
         } else {
             expression += value;
